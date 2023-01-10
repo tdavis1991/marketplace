@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
+import { SignIn, SignUp } from '../components'
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Main() {
   return (
@@ -13,8 +13,8 @@ export default function Main() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <h1 className='flex justify-center items-center'>Hello World</h1>
+      <main className='flex items-center justify-center h-screen'>
+        <SignUp />
       </main>
     </>
   )

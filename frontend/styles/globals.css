@@ -8,3 +8,20 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
+body {
+  background-color: aqua;
+  min-height: 100vh;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+.input-01 {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  padding: 5px;
+}
