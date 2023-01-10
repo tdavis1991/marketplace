@@ -32,7 +32,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className='w-full flex flex-1 justify-center items-center'>
+    <div className='w-full flex flex-1 justify-center items-center h-screen'>
       <div className='bg-white rounded-lg p-3 w-1/3 flex flex-col items-center'>
         <h2 className='text-center mb-10'>Sign Up</h2>
         <form onSubmit={handleSubmit} className='flex flex-col w-4/5 items-start'>

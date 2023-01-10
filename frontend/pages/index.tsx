@@ -1,10 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import { SignIn, SignUp } from '../components'
 
 
-export default function Main() {
+export default function Home() {
   return (
     <>
       <Head>
@@ -14,7 +11,7 @@ export default function Main() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='flex items-center justify-center h-screen'>
-        <SignUp />
+        <h2>Hello World</h2>
       </main>
     </>
   )
