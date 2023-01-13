@@ -1,7 +1,17 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import { signOut } from "firebase/auth";
+import { auth } from '../firebase/clientApp';
 
 
 export default function Home() {
+
+  const handleClick = () => {
+    signOut(auth).then(() => {
+      console.log('IT WORKED')
+    }).catch((error) => {
+      console.log(error.message)
+    });
+  }
   return (
     <>
       <Head>
@@ -11,7 +21,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='flex items-center justify-center h-screen'>
-        <h2>Hello World</h2>
+        <button onClick={handleClick} className='p-6 bg-white'>Signout</button>
       </main>
     </>
   )
