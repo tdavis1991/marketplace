@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { signOut } from 'firebase/auth';
+import { signOut } from "firebase/auth";
 
 import { auth } from '../firebase/clientApp';
 
