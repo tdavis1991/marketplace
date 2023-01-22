@@ -1,10 +1,11 @@
 import Head from 'next/head';
 import { signOut } from "firebase/auth";
+import { useCollection } from 'react-firebase-hooks/firestore'
 
+import firebase from '../firebase/clientApp';
 import { auth } from '../firebase/clientApp';
 
 export default function Home() {
-
 
   // Used to sign out current user
   signOut(auth)
