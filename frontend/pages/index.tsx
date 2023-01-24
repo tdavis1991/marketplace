@@ -1,7 +1,20 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import { signOut } from "firebase/auth";
+import { useCollection } from 'react-firebase-hooks/firestore'
 
+import firebase from '../firebase/clientApp';
+import { auth } from '../firebase/clientApp';
 
 export default function Home() {
+
+  // Used to sign out current user
+  signOut(auth)
+    .then(() => {
+      console.log('USER SIGNED OUT')
+    }).catch((error) => {
+      console.log(error.message)
+    })
+
   return (
     <>
       <Head>
@@ -10,7 +23,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className='flex items-center justify-center h-screen'>
+      <main className='flex items-center justify-center h-screen flex-col'>
         <h2>Hello World</h2>
       </main>
     </>
